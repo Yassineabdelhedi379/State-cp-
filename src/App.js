@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import image from './myP.png';
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  state = {
+    fullName : "Morgan Freeman",
+    bio : "Morgan Freeman (born June 1, 1937)",
+    profession : " an American actor, director, and narrator .",
+    profileImage : <img src="myP" alt="myP.png" />
+  };
+ 
+  render() {
+    return (
+      <div>
+        <h1> This is {this.state.fullName}</h1>
+        <h3> - {this.state.bio}</h3>
+        <h2> He is {this.state.profession} </h2>
+      <div> {this.state.profileImage} </div>
+      
+      </div>
+      
+    )
+  }
 }
-
-export default App;
